@@ -14,7 +14,8 @@ public class Pedido {
 	 * TODO: ARREGLAR
 	 */
 	
-	//atriburos
+	//This code sucks, you know it and I know it. 
+	//Move on and call me an idiot later.
 	private String estado;
 	private int fechaCreacion; //Fecha en que el pedido fue realizado
 	private int fechaConfirmado; //Fecha en que el pedido fue confirmado
@@ -47,6 +48,15 @@ public class Pedido {
 			//EXCEPCION 
 		}
 	}
+	
+	/**
+	* For the brave souls who get this far: You are the chosen ones,
+	* the valiant knights of programming who toil away, without rest,
+	* fixing our most awful code. To you, true saviors, kings of men,
+	* I say this: never gonna give you up, never gonna let you down,
+	* never gonna run around and desert you. Never gonna make you cry,
+	* never gonna say goodbye. Never gonna tell a lie and hurt you.
+	*/
 	
 	public void agregarItem(Item item){
 		listado.add(item);
