@@ -22,7 +22,7 @@ public class Proveedor {
 	private ArrayList<Pedido> pedidos;
 	
 	public Proveedor(){
-		
+		puedeTomarMasPedidos = false;
 	}
 	
 	//agregar un pedido al proveedor, si es que puede tomar pedidos
@@ -43,7 +43,6 @@ public class Proveedor {
 	public ArrayList<Pedido> getPedidosCancelados() {
 		return pedidos;//TODO: iterar
 	}
-	
 	
 	
 	public void recibirCalificacion(int calif){

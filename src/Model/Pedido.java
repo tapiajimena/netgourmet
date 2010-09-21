@@ -2,6 +2,10 @@ package Model;
 
 import java.util.ArrayList;
 
+/**
+ * Un Pedido es un conjunto de Items, estos items pueden pertenecer a distintos proveedores, por ello
+ * el pedido es enviado al dispatcher que toma el pedido, lo filtra por proveedor y lo reparte a los proveedores.
+ */
 public class Pedido {
 //un cliente tiene varios pedidos
 	
