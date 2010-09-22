@@ -26,11 +26,11 @@ public class Proveedor {
 	}
 	
 	//agregar un pedido al proveedor, si es que puede tomar pedidos
-	public void sendPedido(Pedido pedido){
+	public void recibirPedido(Pedido pedido){
 		if (puedeTomarMasPedidos) { 
 			this.pedidos.add(pedido);
 		}else{ 
-			//EXCEPCION 
+			//EXCEPCION -> no toma el pedido y listo XD
 		}
 	}
 	
