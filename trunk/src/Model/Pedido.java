@@ -1,6 +1,7 @@
 package Model;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Un Pedido es un conjunto de Items, estos items pueden pertenecer a distintos proveedores, por ello
@@ -16,10 +17,11 @@ public class Pedido {
 	
 	//This code sucks, you know it and I know it. 
 	//Move on and call me an idiot later.
-	private String estado;
-	private int fechaCreacion; //Fecha en que el pedido fue realizado
-	private int fechaConfirmado; //Fecha en que el pedido fue confirmado
-	private int fechaEnvio; //En caso de realizar un pedido a fecha postergada
+	private boolean confirmado;//confirmado o no confirmado (se podria decir que esta en espera) -> true or false
+	private boolean cancelado;// cancelado o "confirmado o en espera"
+	private Date fechaCreacion; //Fecha en que el pedido fue realizado
+	private Date fechaConfirmado; //Fecha en que el pedido fue confirmado
+	private Date fechaEnvio; //En caso de realizar un pedido a fecha postergada
 	private ArrayList<Item> listado;
 
 	//metodos
@@ -28,25 +30,23 @@ public class Pedido {
 	 * por defecto un Pedido no esta confirmado, esta pendiente
 	 */
 	public Pedido() {
-		this.estado = "Pendiente";
+		confirmado = false;
+		cancelado = false;
 	}
 	
 	public boolean is_confirmado() {
-		if (estado=="confirmado"){ 
-				return true; 
-			}else{
-				return false;
-			}
+		return confirmado;
 	}
+	
 	public void confirmar() {
-		estado = "confirmado";
+		confirmado = true;
 	}
-	public void cancelar() {
-		if (estado!="confirmado") { 
-			estado = "Cancelado";
-		}else{ 
-			//EXCEPCION 
-		}
+	
+	//un pedido se puede cancelar solo si no ha sido confirmado
+	//en otras palabras, solo se puede cancelar si estaba en espera
+	public void cancelar() throws imposibleCancelarPedidoException {
+		if(!confirmado) cancelado = true;
+		else throw new imposibleCancelarPedidoException(this);
 	}
 	
 	/**
