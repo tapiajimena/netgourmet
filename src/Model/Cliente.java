@@ -37,7 +37,6 @@ public class Cliente {
 		super();
 		this.telefono = telefono;
 		this.direccion = direccion;
-		this.historial = historial;
 		this.nombreUsuario = nombreUsuario;
 		this.nombreCompleto = nombreCompleto;
 	}
@@ -55,11 +54,11 @@ public class Cliente {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
-	public Historial getHistorial() {
-		return historial;
+	public void getHistorial() {
+	
 	}
 	public void setHistorial(Historial historial) {
-		this.historial = historial;
+	
 	}
 	public String getNombreUsuario() {
 		return nombreUsuario;
