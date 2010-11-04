@@ -8,7 +8,6 @@ public class Cliente {
 	private ArrayList<Pedido> pedidos;
 	private int telefono;
 	private String direccion;
-	private Historial historial;//EstadisticasDeUso
 	private String nombreUsuario; //para el login
 	private String nombreCompleto;
 	
