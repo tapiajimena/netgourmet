@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Cliente {
 
-	//Atributos
+	//Atributos brian
 	private ArrayList<Pedido> pedidos;
 	private int telefono;
 	private String direccion;
