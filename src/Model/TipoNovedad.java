@@ -1,5 +1,8 @@
 package Model;
 
+/**
+ * 
+ */
 public class TipoNovedad {
 
 	//Atributos
