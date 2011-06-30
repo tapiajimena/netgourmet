@@ -6,10 +6,13 @@ public class Cliente {
 
 	//Atributos
 	private ArrayList<Pedido> pedidos;
-	private int telefono;
+	private String nombre;
 	private String direccion;
-	private String nombreUsuario; //para el login
-	private String nombreCompleto;
+	private String email;
+	private int telefono;
+	private int celular;
+	private String usuario; //para el login
+	private String clave;   //para el login
 	
 	public ArrayList<Pedido> getPedidos() {
 		return pedidos;
@@ -26,19 +29,16 @@ public class Cliente {
 	
 	/**
 	 * Constructor
-	 * @param telefono
-	 * @param direccion
-	 * @param historial
-	 * @param nombreUsuario
-	 * @param nombreCompleto
 	 */
-	public Cliente(int telefono, String direccion, Historial historial,
-			String nombreUsuario, String nombreCompleto) {
+	public Cliente(String nombre, String direccion, String email, int telefono, int celular, String usuario, String clave) {
 		super();
-		this.telefono = telefono;
+		this.nombre = nombre;
 		this.direccion = direccion;
-		this.nombreUsuario = nombreUsuario;
-		this.nombreCompleto = nombreCompleto;
+		this.email = email;
+		this.telefono = telefono;
+		this.celular = celular;		
+		this.usuario = usuario;
+		this.clave = clave;
 	}
 	
 	//metodos getter y setters
@@ -53,24 +53,6 @@ public class Cliente {
 	}
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
-	}
-	public void getHistorial() {
-	
-	}
-	public void setHistorial(Historial historial) {
-	
-	}
-	public String getNombreUsuario() {
-		return nombreUsuario;
-	}
-	public void setNombreUsuario(String nombreUsuario) {
-		this.nombreUsuario = nombreUsuario;
-	}
-	public String getNombreCompleto() {
-		return nombreCompleto;
-	}
-	public void setNombreCompleto(String nombreCompleto) {
-		this.nombreCompleto = nombreCompleto;
 	}
 	
 }
