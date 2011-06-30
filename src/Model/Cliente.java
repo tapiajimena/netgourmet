@@ -1,11 +1,15 @@
 package Model;
+
 import java.util.ArrayList;
 
-
+/**
+ * 
+ */
 public class Cliente {
 
 	//Atributos
 	private ArrayList<Pedido> pedidos;
+	
 	private String nombre;
 	private String direccion;
 	private String email;
@@ -27,6 +31,7 @@ public class Cliente {
 		this.pedidos.add(pedido);
 	}
 	
+	//metodos
 	/**
 	 * Constructor
 	 */
@@ -40,6 +45,10 @@ public class Cliente {
 		this.usuario = usuario;
 		this.clave = clave;
 	}
+	
+	
+	
+	
 	
 	//metodos getter y setters
 	public int getTelefono() {

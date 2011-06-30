@@ -9,12 +9,4 @@ import java.util.ArrayList;
  */
 public class Dispatcher {
 	
-	public void tomarPedido(Pedido pedido) {
-		if (pedido.is_confirmado()){
-			//iterar pedido y armar pedidos por proveedor
-		}else{
-			//EXCEPCION
-		}
-	}
-	
 }
