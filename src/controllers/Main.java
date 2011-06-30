@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Controller;
+package controllers;
 
 /**
  * @author root
