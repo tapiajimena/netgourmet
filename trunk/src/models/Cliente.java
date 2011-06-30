@@ -1,6 +1,8 @@
-package Model;
+package models;
 
 import java.util.ArrayList;
+
+import Model.Pedido;
 
 /**
  * 
